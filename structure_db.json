@@ -1,0 +1,36 @@
+users : [
+	{ // USER
+        "nickname" 	: "John",				// string	Ce qui est affiché	
+        "email" 	: "john@serveur.com",	// string	UNIQUE!!!		
+        "password" 	: "password",			// string	Haché en MD5	
+        "options" 	: { 					// objet	Pour pimper...				
+        }
+	},
+	{ // AUTRE USER
+        "nickname" 	: "Karl",				// Ce qui est affiché
+        "username" 	: "karl@serveur.com",	// unique
+        "password" 	: "password",			// Haché en MD5
+        "options" 	: {						// Pour pimper...
+        	"bg_color"	: "#0000ff",
+        	"image"		: "avatars/mon-image.png"
+        }
+	}
+]
+
+messages : [
+	{ // MESSAGE
+		"id"			: 1, 						// integer
+		"user" 			: 1, 						// integer	référence à l'ID de l'user
+		"content" 		: "Salut tout le monde",	// string
+		"destinataire" 	: "*", 						// mixed	Destinataire = tout le monde + l'expéditeur (toujours)
+		"date"			: 1513081196 				// timestamp (integer)
+	},
+	{ // AUTRE MESSAGE
+		"id"			: 2,
+		"user" 			: 2,			// référence à l'ID de l'user
+		"content" 		: "Salut John",
+		"destinataire" 	: 1,			// Destinataires = user qui a ID 1 + l'expéditeur (toujours)
+		"date"			: 1513083196	// format timestamp
+	}
+]
+
