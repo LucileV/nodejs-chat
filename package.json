@@ -1,14 +1,17 @@
 {
-  "name": "chat",
+  "name": "nodeexpress",
   "version": "1.0.0",
-  "description": "Cycorp Chat",
-  "main": "index.js",
+  "description": "Chat CyCorp",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Amandine, Vadim, Daniel",
+  "author": "BeCode CyCorp",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
   }
 }
